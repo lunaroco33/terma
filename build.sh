@@ -1,4 +1,4 @@
 mkdir -p out
-for file in bug-report.md feature.md orient.md implement.md prototype.md code-review.md decompose.md next-up.md harden.md research.md; do
+for file in bug-report.md feature.md progress.md resolve.md orient.md implement.md prototype.md code-review.md decompose.md next-up.md harden.md research.md; do
   deno run --allow-read --allow-write build.ts "$file" "out/$file"
 done

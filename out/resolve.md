@@ -1,3 +1,9 @@
+# Bug Resolved
+
+The bug is resolved. Let's remove it from BUGS.md, add it to BUG\_HISTORY.md.
+
+Then let's create a progress report:
+
 # Progress Report
 
 !(./subagent.md)
