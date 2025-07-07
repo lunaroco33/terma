@@ -1,31 +1,8 @@
 # Functional Application Architecture Patterns
 
-## Core Pattern: Functional Core, Imperative Shell
+!include(functional-core-imperative-shell.md)
 
-The fundamental pattern is to push all I/O and side effects to the edges of the system. Pure functions form the core, while impure operations exist only at the boundaries. This naturally emerges as a Ports and Adapters architecture without extensive design effort.
-
-### Structure
-```
-┌─────────────────────────┐
-│   Imperative Shell      │ ← I/O, Database, HTTP
-│  ┌─────────────────┐    │
-│  │ Functional Core │    │ ← Pure Business Logic
-│  └─────────────────┘    │
-└─────────────────────────┘
-```
-
-## The Impureim Sandwich
-
-Entry points are always impure. The pattern: collect all required data through impure actions, pass to pure function(s), then handle the result with impure actions.
-
-```haskell
--- Pseudo-code pattern
-impureHandler input = do
-  data1 <- impureRead1        -- Gather inputs
-  data2 <- impureRead2
-  let result = pureLogic data1 data2  -- Pure computation
-  impureWrite result           -- Handle output
-```
+!include(impureim-sandwich.md)
 
 ## Module Organization
 
@@ -48,23 +25,7 @@ Separate behavior from data. Data types are simple and transparent. Functions ac
 8. Program.fs            -- Entry point, composition root
 ```
 
-## Type-Driven Design
-
-In Haskell, the type system enforces purity. Functions returning `IO` are impure; others are guaranteed pure. This creates a "pit of success" where good architecture emerges naturally.
-
-### Key Principle
-Functions should accept data, not capabilities:
-```fsharp
-// ❌ Accepting a function (capability)
-let checkCapacity getReservedSeats reservation =
-    let reserved = getReservedSeats reservation.Date
-    // ...
-
-// ✅ Accepting data
-let checkCapacity reservedSeats reservation =
-    if capacity < reservation.Quantity + reservedSeats then
-        // ...
-```
+!include(dependency-rejection.md)
 
 ## Railway-Oriented Programming
 
