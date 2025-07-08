@@ -1,4 +1,8 @@
-# Terma
+# Terma (གཏེར་མ)
+[![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
+
+[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
+[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
 
 This is a highly-opinionated library of philosophy and process for developing software with LLMs, specifically Claude Code.
 
@@ -37,3 +41,7 @@ You can edit anything in `lib` or the root and run and use `./build.sh` to rebui
 ## Trivia
 
 The `subagent.md` file encourages "ultrathinking", which may burn through usage quickly. Consider customizing it manually until we have variables.
+
+## License
+
+This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
