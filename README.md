@@ -1,6 +1,6 @@
 # Terma
 
-This is a library of process for developing software with LLMs, specifically Claude Code.
+This is a highly-opinionated library of philosophy and process for developing software with LLMs, specifically Claude Code.
 
 Copy/clone the contents of `out` into `~/.claude/commands` to install these across all projects.
 
@@ -28,3 +28,12 @@ We currently assume a protocol of `LOG.md`, `BUGS.md`, `SPEC.md`, `CLAUDE.md` et
 - tech spike: `/prototype`, `/debug`
 
 - improve codebase architecture: `/orient`, `/research`, `/decompose`, `/code-review`
+
+## Customizing
+
+The build depends on `deno`.
+You can edit anything in `lib` or the root and run and use `./build.sh` to rebuild all. We use a simple `remark` transform for text inclusion, nothing fancy.
+
+## Trivia
+
+The `subagent.md` file encourages "ultrathinking", which may burn through usage quickly. Consider customizing it manually until we have variables.
