@@ -8,6 +8,14 @@ This is a highly-opinionated library of philosophy and process for developing so
 
 Copy/clone the contents of `out` into `~/.claude/commands` to install these across all projects.
 
+## Installation
+
+`mkdir -p ~/.claude/commands/terma`
+`mkdir -p ~/.claude/agents/terma`
+
+`ln -s <CHECKOUT>/out/commands ~/.claude/commands/terma`
+`ln -s <CHECKOUT>/subagents ~/.claude/agents/terma`
+
 ## Quick Start
 
 Use `/orient` to begin each session. Use `/research :question` to probe the codebase and write a report to `/research`. Then, use `/plan` or just `/feature` to plan a change to the application.
